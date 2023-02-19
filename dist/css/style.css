@@ -556,6 +556,8 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -563,9 +565,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 56.25%;
 }
 
-.fullscreen__video {
+.fullscreen__video,
+.fullscreen iframe {
   position: absolute;
   left: 0;
   top: 0;
