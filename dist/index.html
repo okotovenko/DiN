@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230219192142">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230221205759">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- Кодування сторінки: ширина області перегляду така ж, як і ширина екрану; зум за замовчуванням 100%; заборона масштабувати контент користувачу -->
@@ -48,7 +48,7 @@
 				<source type='video/mp4' src='img/video/video.mp4'>
 			</video>
 		</section> -->
-		<header data-scroll-show class="header">
+		<header data-watch-threshold="0.2" data-watch-once data-watch data-scroll-show class="header">
 			<div class="header__container">
 				<div class='header__menu menu'>
 					<div class="menu__logo">
@@ -57,9 +57,9 @@
 					</div>
 					<nav class='menu__body'>
 						<ul class='menu__list'>
-							<li class='menu__item'><a href='#' class='menu__link'>Наші послуги</a></li>
-							<li class='menu__item'><a href='#' class='menu__link'>Приклади робіт</a></li>
-							<li class='menu__item'><a href='#' class='menu__link'>Часті запитання</a></li>
+							<li data-goto=".servises" class='menu__item'><a href='#' class='menu__link'>Наші послуги</a></li>
+							<li data-goto=".exemple" class='menu__item'><a href='#' class='menu__link'>Приклади робіт</a></li>
+							<li data-goto=".question" class='menu__item'><a href='#' class='menu__link'>Часті запитання</a></li>
 						</ul>
 					</nav>
 					<div class="menu__language">
@@ -84,27 +84,253 @@
 		</header>
 		<main class="page">
 			<section class="page__main main">
-				<div class="main__container">
-					<div class="main__left">
-						<h1 class="main__title">Lorem ipsum dolor sit amet.</h1>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, atque!</p>
+				<div data-prlx-parent class="main__container">
+					<div data-prlx data-direction='1' data-coefficient='150' class="main__left">
+						<h1 data-watch-threshold="0.2" data-watch-once data-watch class="main__title">Lorem ipsum dolor sit
+							amet.</h1>
+						<p data-watch-once data-watch>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, atque!
+						</p>
 					</div>
-					<div class="main__right right-main">
-						<div class="right-main__top-ibg">
+					<div data-prlx data-direction='1' data-coefficient='150' class="main__right right-main">
+						<div data-watch-threshold="0.1" data-watch-once data-watch class="right-main__top-ibg">
 							<picture><source srcset="img/main/1.webp" type="image/webp"><img src="img/main/1.jpg" alt="img"></picture>
 						</div>
-						<div class="right-main__center-ibg">
+						<div data-prlx-mouse data-watch-threshold="0.9" data-watch-once data-watch class="right-main__center-ibg">
 							<picture><source srcset="img/main/2.webp" type="image/webp"><img src="img/main/2.png" alt="img"></picture>
-						</div>
-						<div class="right-main__bottom-ibg">
-							<picture><source srcset="img/3.webp" type="image/webp"><img src="img/3.png" alt="img"></picture>
 						</div>
 					</div>
 				</div>
 			</section>
+			<section data-watch="navigator" class="page__servises servises">
+				<div data-prlx-parent class="servises__container">
+					<h2 data-prlx data-direction='1' data-coefficient='100' data-watch-threshold="0.5" data-watch class="servises__title title">Наші послуги
+					</h2>
+					<di data-prlx data-direction='1' data-coefficient='150' class="servises__items">
+						<div data-watch-threshold="0.5" data-watch class="servises__item">
+							<p class="servises__subtitle">Зробити власноруч</p>
+							<div class="servises__box">
+								<div data-prlx-mouse class="servises__img-ibg">
+									<picture><source srcset="img/main/1.webp" type="image/webp"><img src="img/main/1.jpg" alt="img"></picture>
+								</div>
+								<div class="servises__text">
+									<p>При замовленні ви отримаєте:</p>
+									<ul>
+										<li>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+										</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div data-watch-threshold="0.5" data-watch class="servises__item">
+							<p class="servises__subtitle">Замовити готову картину</p>
+							<div class="servises__box">
+								<div data-prlx-mouse class="servises__img-ibg">
+									<picture><source srcset="img/main/1.webp" type="image/webp"><img src="img/main/1.jpg" alt="img"></picture>
+								</div>
+								<div class="servises__text">
+									<p>При замовленні ви отримаєте:</p>
+									<ul>
+										<li>Lorem ipsum dolor sit amet.</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+										<li>Lorem ipsum dolor sit amet.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</di>
+				</div>
+			</section>
+			<section data-watch="navigator" class="page__exemple exemple">
+				<div class="exemple__container">
+					<h2 class="exemple__title title">Приклади робіт</h2>
+					<div class="exemple__box">
+						<div class="exemple__slider swiper">
+							<div class="exemple__wrapper swiper-wrapper">
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/1.webp" type="image/webp"><img src="img/1.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/2.webp" type="image/webp"><img src="img/2.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/3.webp" type="image/webp"><img src="img/3.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/4.webp" type="image/webp"><img src="img/4.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/5.webp" type="image/webp"><img src="img/5.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/2.webp" type="image/webp"><img src="img/2.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/3.webp" type="image/webp"><img src="img/3.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/4.webp" type="image/webp"><img src="img/4.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="exemple__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/5.webp" type="image/webp"><img src="img/5.jpg" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<button type="button" class="swiper-button-prev-exemple _icon-circle-right"></button>
+						<button type="button" class="swiper-button-next-exemple _icon-circle-right"></button>
+					</div>
+				</div>
+			</section>
+			<section data-watch class="page__reviews reviews">
+				<div class="reviews__container">
+					<h2 class="reviews__title title">Відгуки клієнтів</h2>
+					<div class="reviews__box">
+						<div class="reviews__slider swiper">
+							<div class="reviews__wrapper swiper-wrapper">
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/1.webp" type="image/webp"><img src="img/1.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/2.webp" type="image/webp"><img src="img/2.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/3.webp" type="image/webp"><img src="img/3.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/4.webp" type="image/webp"><img src="img/4.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/5.webp" type="image/webp"><img src="img/5.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/2.webp" type="image/webp"><img src="img/2.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/3.webp" type="image/webp"><img src="img/3.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg">
+										<picture><source srcset="img/4.webp" type="image/webp"><img src="img/4.jpg" alt="img"></picture>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="swiper-slide__img-ibg swiper-zoom-container">
+										<picture><source srcset="img/5.webp" type="image/webp"><img src="img/5.jpg" alt="img"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<button type="button" class="swiper-button-prev-reviews _icon-circle-right"></button>
+						<button type="button" class="swiper-button-next-reviews _icon-circle-right"></button>
+					</div>
+				</div>
+			</section>
+			<section data-watch="navigator" class="page__question question">
+				<div class="question__container">
+					<h2 class="question__title title">Условия доставки</h2>
+					<div class="question__box">
+						<div data-spollers class="question__spollers spollers">
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title _icon-keyboard_arrow_up">У наших
+									курьеров всегда
+									должна быть сдача!</button>
+								<div class="spollers__body">Мы очень внимательно следим за качеством нашей работы, поэтому, если
+									у вас будут какие-либо замечания или предложения, то обязательно сообщайте их нам</div>
+							</div>
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title _icon-keyboard_arrow_up">Вам что-то не
+									довезли?</button>
+								<div class="spollers__body">Мы очень внимательно следим за качеством нашей работы, поэтому, если
+									у вас будут какие-либо замечания или предложения, то обязательно сообщайте их нам</div>
+							</div>
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title _icon-keyboard_arrow_up">Не понравился
+									продукт?</button>
+								<div class="spollers__body">Мы очень внимательно следим за качеством нашей работы, поэтому, если
+									у вас будут какие-либо замечания или предложения, то обязательно сообщайте их нам</div>
+							</div>
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title _icon-keyboard_arrow_up">Если
+									появились
+									замечания</button>
+								<div class="spollers__body">Мы очень внимательно следим за качеством нашей работы, поэтому, если
+									у вас будут какие-либо замечания или предложения, то обязательно сообщайте их нам</div>
+							</div>
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title _icon-keyboard_arrow_up">Оплата Visa и
+									MasterCard</button>
+								<div class="spollers__body">Мы очень внимательно следим за качеством нашей работы, поэтому, если
+									у вас будут какие-либо замечания или предложения, то обязательно сообщайте их нам</div>
+							</div>
+							<div class="spollers__item">
+								<button type="button" data-spoller class="spollers__title _icon-keyboard_arrow_up">Реквизиты</button>
+								<div class="spollers__body">Мы очень внимательно следим за качеством нашей работы, поэтому, если
+									у вас будут какие-либо замечания или предложения, то обязательно сообщайте их нам</div>
+							</div>
+						</div>
+						<div class="question__video">
+							<iframe src="https://www.youtube.com/embed/FoI5Z6CLvV4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; muted" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="page__sticky sticky">
+				<div class="sticky__vider _icon-viber"></div>
+				<div class="sticky__telegram _icon-telegram"></div>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="menu__logo">
+					<p>DiN</p>
+					<p>string art</p>
+				</div>
+				<div class="footer__contacts">
+					<a class="footer__phone" href="tel: +380 50 246 63 14">+380 50 246 63 14</a>
+					<div class="footer__social">
+						<a href="#" class="_icon-instagraml"></a>
+						<a href="#" class="_icon-tiktok"></a>
+						<a href="#" class="_icon-telegram"></a>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -118,7 +344,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230219192142"></script>
+	<script src="js/app.min.js?_v=20230221205759"></script>
 </body>
 
 </html>
